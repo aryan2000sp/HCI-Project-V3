@@ -1,7 +1,67 @@
+// --------------------------------------
+// Global Variables
+// --------------------------------------
+$primary-text-color: #242d52;
+
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+
+// Breakpoints for responsive design
+$breakpoints-up: (
+  "small-mobile": "300px",
+  "large-mobile": "400px",
+  "tablet": "768px",
+  "small-laptop": "1024px",
+  "medium-laptop": "1300px",
+  "large-laptop": "1500px",
+  // "large": "52.5em",
+  // "x-large": "81.25em",,,,,,,
+);
+
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+body {
+  background-color: #6db8eb;
+}
+
+h1 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.225px;
 }

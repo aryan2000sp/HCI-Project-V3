@@ -1,0 +1,134 @@
+.header {
+  background-color: #fafafa;
+  padding: 0rem 1rem;
+  box-shadow: $box-shadow;
+  position: sticky;
+  width: 100%;
+  top: 0;
+
+  &-navbar {
+    display: grid;
+    grid-template-columns: 78% 18%;
+    grid-column-gap: 4%;
+    align-items: center;
+  }
+
+  &-hamburger-menu {
+    justify-self: flex-end;
+  }
+
+  &-menu {
+    display: none;
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      > li {
+        list-style: none;
+        > h3 {
+          font-size: 18px;
+          color: $primary-text-color;
+        }
+      }
+      > li:not(:last-child) {
+        margin-right: 2em;
+      }
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      font-size: 18px;
+      line-height: 36px;
+      color: $primary-text-color;
+    }
+  }
+}
+
+.mobile-menu {
+  background-color: #fafafa;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  overflow: hidden;
+  &-list {
+    text-align: center;
+    list-style: none;
+    li:not(:last-child) {
+      margin-bottom: 1em;
+      > h3 {
+        color: $primary-text-color;
+      }
+    }
+  }
+}
+
+.salad-icon-container {
+  width: 56px;
+  height: 56px;
+}
+
+// Media Queries
+
+// For tablet view
+@media (min-width: map-get($breakpoints-up, "tablet")) {
+  .header {
+    padding: 0rem 2rem;
+    &-title {
+      h2 {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .salad-icon-container {
+    height: 72px;
+    width: 72px;
+  }
+}
+
+// For small laptop view
+@media (min-width: map-get($breakpoints-up, "small-laptop")) {
+  .header {
+    padding-bottom: 1rem;
+    &-menu {
+      display: block;
+      margin-top: 0.5em;
+      ul > li > h3 {
+        font-size: 18px;
+      }
+    }
+    &-hamburger-menu {
+      display: none;
+    }
+
+    &-title {
+      grid-column: 1 / span 2;
+    }
+  }
+}
+
+// For medium laptop view
+@media (min-width: map-get($breakpoints-up, "medium-laptop")) {
+  .header {
+    &-title {
+      h2 {
+        margin-top: 1.5rem;
+        font-size: 40px;
+        line-height: 56px;
+      }
+    }
+
+    &-menu > ul > li > h3 {
+      font-size: 24px;
+    }
+  }
+
+  .salad-icon-container {
+    height: 100px;
+    width: 100px;
+  }
+}
