@@ -1,0 +1,149 @@
+.home-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1em;
+  padding-top: 2rem;
+  display: grid;
+  grid-row-gap: 3.5rem;
+  grid-template-areas:
+    "calorie"
+    "macro"
+    "profile"
+    "category";
+
+  // Styling for all the cards
+  &-card {
+    background-color: #fafafa;
+    box-shadow: $box-shadow;
+    min-height: 100px;
+    border-radius: $border-radius;
+    padding: 1.25rem;
+  }
+
+  // Styling for the main content of the page
+  // &-content {
+  //   grid-column: 1 / span 2;
+  // }
+
+  &-profile {
+    grid-area: profile;
+    min-height: 300px;
+    h1 {
+      margin-bottom: clamp(2rem, 10vw, 4rem);
+      font-size: clamp(24px, 10vw, 56px);
+      line-height: clamp(56px, 12vw, 72px);
+      text-align: center;
+    }
+  }
+
+  &-macro {
+    grid-area: macro;
+    min-height: 300px;
+    h1 {
+      margin-bottom: clamp(2rem, 10vw, 4rem);
+      font-size: clamp(24px, 10vw, 56px);
+      line-height: clamp(56px, 12vw, 72px);
+      text-align: center;
+    }
+  }
+
+  // Styling for the calorie count card
+  &-calorie {
+    grid-area: calorie;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin-bottom: clamp(2rem, 10vw, 4rem);
+      font-size: clamp(24px, 10vw, 64px);
+      line-height: clamp(56px, 12vw, 72px);
+      text-align: center;
+    }
+  }
+
+  // Styling for the category
+  &-category {
+    grid-area: category;
+    // grid-template-columns: auto auto;
+    > section:nth-child(1) {
+      grid-area: breakfast;
+    }
+    > section:nth-child(2) {
+      grid-area: lunch;
+    }
+    > section:nth-child(3) {
+      grid-area: dinner;
+    }
+    > section:nth-child(1) {
+      grid-area: snack;
+    }
+
+    display: grid;
+    grid-template-areas:
+      "breakfast"
+      "lunch"
+      "dinner"
+      "snack";
+    grid-gap: 1rem;
+  }
+}
+
+// Media queries
+
+// For Tablet view
+@media (min-width: map-get($breakpoints-up, "tablet")) {
+  .home-main {
+    padding: 2rem;
+    padding-top: 3.25rem;
+
+    &-card {
+      padding: 2rem;
+    }
+  }
+}
+
+// For small laptop view
+@media (min-width: map-get($breakpoints-up, "small-laptop")) {
+  .home-main {
+    grid-template-areas:
+      "calorie macro"
+      "calorie profile"
+      "category category";
+
+    justify-content: space-between;
+
+    grid-template-columns: 48% 48%;
+
+    &-category {
+      grid-template-areas:
+        "breakfast lunch"
+        "dinner snack";
+    }
+
+    // &-macro {
+    //   min-height: 400px;
+    // }
+  }
+}
+
+// For medium laptop view
+@media (min-width: map-get($breakpoints-up, "medium-laptop")) {
+  .home-main {
+    grid-template-areas:
+      "calorie macro profile"
+      "category category category";
+    grid-template-columns: 40% 27% 27%;
+    justify-content: space-between;
+
+    &-calorie {
+      justify-content: center;
+    }
+
+    &-category {
+      grid-gap: 2rem;
+      grid-template-areas: "breakfast lunch dinner snack";
+    }
+  }
+}
