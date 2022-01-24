@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/HCI-Project-V3/static/css/main.232c9be6.css",
+    "main.js": "/HCI-Project-V3/static/js/main.963ab2c1.js",
+    "static/media/salad_bowl_big.svg": "/HCI-Project-V3/static/media/salad_bowl_big.dca4a3d966b79882142e880546708a3b.svg",
+    "index.html": "/HCI-Project-V3/index.html",
+    "static/media/close.svg": "/HCI-Project-V3/static/media/close.805ba3344f8e8019fea2204e0b876245.svg",
+    "static/media/hambuger.svg": "/HCI-Project-V3/static/media/hambuger.798f8c8dab09601ae4d9114cd218d1d0.svg",
+    "main.232c9be6.css.map": "/HCI-Project-V3/static/css/main.232c9be6.css.map",
+    "main.963ab2c1.js.map": "/HCI-Project-V3/static/js/main.963ab2c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.232c9be6.css",
+    "static/js/main.963ab2c1.js"
+  ]
+}
